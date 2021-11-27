@@ -1,6 +1,17 @@
-<script setup>
+<script setup lang="ts">
+import { PropType } from '@vue/runtime-core';
+
+interface Project {
+  title: string,
+  repository: string,
+  url: string,
+};
+
 defineProps({
-  project: Object
+  project: {
+    type: Object as PropType<Project>,
+    required: true
+  },
 })
 </script>
 
