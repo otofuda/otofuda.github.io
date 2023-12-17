@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon'
+import type { Link } from '../types';
+
+interface Props {
+  link: Link;
+}
+
+const { link } = Astro.props
+---
+
+<a href={link.href} class="link">
+  <Icon pack="mdi" name={link.icon} />
+</a>
+
+<style>
+  .link {
+    display: flex;
+    opacity: 0.75;
+  }
+  .link svg {
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+  }
+  .link:is(:hover, :focus-within) {
+    opacity: 1;
+  }
+</style>
