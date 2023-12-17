@@ -1,77 +1,79 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Link from "../components/Link.astro";
+
+import projects from "../projects";
+import links from "../links";
 ---
 
 <Layout title="OTOFUDA Open Source Projects">
-	<main>
-		<h1>OTOFUDA</h1>
-		<h2>Open Source Projects</h2>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://otofuda.github.io/"
-				title="OTOFUDA Open Source Projects"
-				repo="otofuda/otofuda.github.io"
-			/>
-			<Card
-				href="https://otofuda.github.io/chart-editor/"
-				title="Chart Editor V2"
-				repo="otofuda/chart-editor"
-			/>
-			<Card
-				href="https://otofuda.github.io/story-builder/"
-				title="StoryBuilder"
-				repo="otofuda/story-builder"
-			/>
-			<Card
-				href="https://github.com/otofuda/chart-types/blob/master/README.md"
-				title="Chart Types"
-				repo="otofuda/chart-types"
-			/>
-		</ul>
-		<footer>© OTOFUDA Project</footer>
-	</main>
+  <main>
+    <h1>OTOFUDA</h1>
+    <h2>Open Source Projects</h2>
+
+    <ul role="list" class="link-card-grid">
+      {projects.map((project) =>
+        <Card project={project} />
+      )}
+    </ul>
+
+    <div role="list" class="links">
+      {links.map((link) =>
+        <Link link={link} />
+      )}
+    </div>
+
+    <footer>© OTOFUDA Project</footer>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin: 2rem 0 0 0;
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	h2 {
-		font-size: 1.5rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin: 1rem 0 4rem 0;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	footer {
-		margin-top: 4em;
-		text-align: center;
-		font-size: 0.75rem;
-		opacity: 0.6;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin: 1rem 0 4rem 0;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+  .links {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  footer {
+    margin-top: 4em;
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
 </style>
