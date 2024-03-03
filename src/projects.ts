@@ -2,7 +2,7 @@ import type { Project } from "./types";
 
 const projects: Project[] = [
   {
-    title: "OTOFUDA Open Source Projects",
+    title: "Open Source Projects",
     repo: "otofuda/otofuda.github.io",
     href: "https://otofuda.github.io/"
   },
@@ -12,7 +12,7 @@ const projects: Project[] = [
     href: "https://otofuda.github.io/chart-editor/"
   },
   {
-    title: "Portal",
+    title: "Otofuda Portal",
     repo: "otofuda/portal",
     href: "https://otofuda.com"
   },

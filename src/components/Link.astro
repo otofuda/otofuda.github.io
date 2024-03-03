@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components';
 import type { Link } from '../types';
 
 interface Props {
@@ -9,14 +9,14 @@ interface Props {
 const { link } = Astro.props
 ---
 
-<a href={link.href} class="link">
-  <Icon pack="mdi" name={link.icon} />
+<a href={link.href} class="link" target="_blank">
+  <Icon name={link.icon} title={link.href} />
 </a>
 
 <style>
   .link {
     display: flex;
-    opacity: 0.75;
+    opacity: 0.5;
   }
   .link svg {
     color: #ffffff;
