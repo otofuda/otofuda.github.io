@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://otofuda.github.io'
+  site: 'https://otofuda.github.io',
+  integrations: [icon()]
 });
