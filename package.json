@@ -1,7 +1,7 @@
 {
-  "name": "io",
+  "name": "otofuda.github.io",
   "type": "module",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@iconify-json/mdi": "^1.1.64",
-    "astro": "^4.4.9",
+    "@iconify-json/mdi": "^1.1.66",
+    "astro": "^4.9.2",
     "astro-icon": "^1.1.0"
   },
   "volta": {
-    "node": "20.7.0"
+    "node": "22.2.0"
   }
 }
