@@ -2,7 +2,7 @@
 
 Introducing the OSS projects of the Otofuda Project
 
-- Astro v4
+- Astro v5
 - Node.js v22
 
 ## 🧞 Commands
