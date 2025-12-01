@@ -14,7 +14,15 @@ const links: Link[] = [
     icon: "mdi:youtube"
   },
   {
-    href: "https://twitter.com/otofuda",
+    href: "https://www.instagram.com/otfdpr/",
+    icon: "mdi:instagram"
+  },
+  {
+    href: "https://www.facebook.com/profile.php?id=61578734092510",
+    icon: "mdi:facebook"
+  },
+  {
+    href: "https://x.com/otofuda",
     icon: "mdi:twitter"
   }
 ] as const;
