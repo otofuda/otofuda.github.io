@@ -4,8 +4,8 @@ https://otofuda.github.io/
 
 Introducing the OSS projects of the Otofuda Project
 
-- Astro v5
-- Node.js v22
+- Astro v7
+- Node.js v24
 
 ## 📦 Projects
 
